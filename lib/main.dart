@@ -5,9 +5,9 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
+  const MyApp({super.key});
 
-  bool isRunning = false;
+  final bool isRunning = false;
 
   @override
   Widget build(BuildContext context) {
