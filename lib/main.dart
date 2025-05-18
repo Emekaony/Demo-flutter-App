@@ -1,5 +1,3 @@
-import "dart:developer";
-
 import "package:flutter/material.dart";
 
 void main() {
@@ -34,7 +32,7 @@ class MyApp extends StatelessWidget {
         ),
         appBar: AppBar(
           title: Text(
-            "Simple App",
+            "Fakai App",
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
           // backgroundColor: Colors.black,
@@ -65,25 +63,14 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                 ),
-                Spacer(),
-                InkWell(
-                  splashColor: Colors.white,
-                  child: Container(
-                    alignment: Alignment.center,
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                      color: isRunning ? Colors.red : Colors.green,
-                      borderRadius: BorderRadius.circular(50),
-                    ),
-                    child: Text(
-                      isRunning ? "STOP" : "START",
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+
+                SizedBox(width: 10),
+                ClipOval(
+                  child: Image.asset(
+                    'assets/images/image_one.jpg',
+                    width: 120,
+                    height: 120,
+                    fit: BoxFit.cover, // ensures it fills the oval
                   ),
                 ),
               ],
