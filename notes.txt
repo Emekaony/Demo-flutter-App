@@ -1,0 +1,4 @@
+1. Get in the habit of using "final" for things u know will not be reassigned.
+2. Make sure to realize the distinction between final and const.
+3. Strive to solve harder and harder challenges over time. Never shy away from hard work!
+4. At the end of the day, nobody really knows what they're doing, we all just figure it out somehow!

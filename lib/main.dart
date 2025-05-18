@@ -4,10 +4,23 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   final bool isRunning = false;
+
+  int _selectedIndex = 0;
+
+  void handleDestinationSelected(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,11 +37,20 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            print("Floating action button was pressed!");
-          },
-          child: Icon(Icons.add),
+        bottomNavigationBar: NavigationBar(
+          onDestinationSelected: handleDestinationSelected,
+          selectedIndex: _selectedIndex,
+          destinations: <Widget>[
+            NavigationDestination(icon: Icon(Icons.explore), label: "Explore"),
+            NavigationDestination(
+              icon: Icon(Icons.party_mode),
+              label: "Events",
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.access_alarm),
+              label: "Schedule",
+            ),
+          ],
         ),
         appBar: AppBar(
           title: Text(
