@@ -19,12 +19,6 @@ class WidgetTree extends StatelessWidget {
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
         backgroundColor: Colors.black,
-        actions: [
-          Padding(
-            padding: EdgeInsets.only(right: 10),
-            child: Icon(Icons.light_mode),
-          ),
-        ],
         // backgroundColor: Colors.black,
         centerTitle: true,
       ),
