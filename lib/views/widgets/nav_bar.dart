@@ -8,7 +8,7 @@ class NavBarWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ValueListenableBuilder(
       valueListenable: selectedPageNotifier,
-      builder: (BuildContext context, int selectedPage, Widget? child) {
+      builder: (BuildContext context, int selectedPage, _) {
         return NavigationBar(
           onDestinationSelected: (int value) {
             selectedPageNotifier.value = value;
