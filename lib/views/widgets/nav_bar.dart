@@ -15,11 +15,20 @@ class NavBarWidget extends StatelessWidget {
           },
           selectedIndex: selectedPage,
           destinations: <Widget>[
-            NavigationDestination(icon: Icon(Icons.home), label: "Home"),
-            NavigationDestination(icon: Icon(Icons.person), label: "Profile"),
+            NavigationDestination(
+              icon: Icon(Icons.home),
+              label: "Home",
+              tooltip: "",
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.person),
+              label: "Profile",
+              tooltip: "",
+            ),
             NavigationDestination(
               icon: Icon(Icons.schedule),
               label: "Schedule",
+              tooltip: "",
             ),
           ],
         );
