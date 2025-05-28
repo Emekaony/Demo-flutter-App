@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import "package:flutter_app/data/notifiers.dart";
 
 class NavBarWidget extends StatelessWidget {
@@ -9,26 +9,23 @@ class NavBarWidget extends StatelessWidget {
     return ValueListenableBuilder(
       valueListenable: selectedPageNotifier,
       builder: (BuildContext context, int selectedPage, _) {
-        return NavigationBar(
-          onDestinationSelected: (int value) {
+        return CupertinoTabBar(
+          currentIndex: selectedPage,
+          onTap: (int value) {
             selectedPageNotifier.value = value;
           },
-          selectedIndex: selectedPage,
-          destinations: <Widget>[
-            NavigationDestination(
-              icon: Icon(Icons.home),
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(CupertinoIcons.home),
               label: "Home",
-              tooltip: "",
             ),
-            NavigationDestination(
-              icon: Icon(Icons.person),
+            BottomNavigationBarItem(
+              icon: Icon(CupertinoIcons.person),
               label: "Profile",
-              tooltip: "",
             ),
-            NavigationDestination(
-              icon: Icon(Icons.schedule),
+            BottomNavigationBarItem(
+              icon: Icon(CupertinoIcons.time),
               label: "Schedule",
-              tooltip: "",
             ),
           ],
         );

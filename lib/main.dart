@@ -1,4 +1,4 @@
-import "package:flutter/material.dart";
+import 'package:flutter/material.dart';
 import "package:flutter_app/views/widget_tree.dart";
 
 void main() {
@@ -7,7 +7,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-  final bool isRunning = false;
 
   @override
   Widget build(BuildContext context) {
